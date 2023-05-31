@@ -1,0 +1,15 @@
+#cats-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:toRem(16);
+
+    .cat-item{
+        background-color: $white-color;
+        img{
+            width: 100%;
+            height: toRem(150);
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
