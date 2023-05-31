@@ -1,5 +1,5 @@
 // Number of cat images
-const numberCats = 10
+const numberCats = 16
 
 // 1 for true, 0 for false
 const hasBreeds = 1

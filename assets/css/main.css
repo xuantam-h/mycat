@@ -3,10 +3,24 @@
 /* Function to convert into Rem units */
 body {
   background-color: #AFD275;
+  font-family: "Poppins", sans-serif;
+  color: #FFF;
 }
 
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #FFF;
+  font-size: 3.125rem;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .container {
@@ -16,11 +30,35 @@ img {
 
 #cats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  #cats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #cats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 #cats-grid .cat-item {
   background-color: #FFF;
+  height: 9.375rem;
+  position: relative;
+}
+#cats-grid .cat-item .cat-item-info {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0rem;
+  padding: 0 0.5rem;
+  border-bottom: 0.1875rem solid #AFD275;
+}
+#cats-grid .cat-item .cat-item-info p {
+  margin: 0;
+  text-align: center;
+  color: #FFF;
 }
 #cats-grid .cat-item img {
   width: 100%;

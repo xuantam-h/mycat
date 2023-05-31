@@ -1,10 +1,34 @@
 #cats-grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap:toRem(16);
+
+    @include tablet {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(4,1fr);
+    }
 
     .cat-item{
         background-color: $white-color;
+        height:toRem(150);
+        position: relative;
+
+        .cat-item-info{
+            position: absolute;
+            bottom:toRem(8);
+            right:toRem(0);
+            padding: 0 toRem(8);
+            border-bottom:toRem(3) solid $primary-color;
+            p{
+                margin: 0;
+                text-align: center;
+                color:$white-color;
+            }
+        }
+        
         img{
             width: 100%;
             height: toRem(150);
